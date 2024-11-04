@@ -1,0 +1,23 @@
+<!-- main/templates/main/home.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Контакты и команда</title>
+</head>
+<body>
+    <h1>Контакты</h1>
+    <ul>
+        <li>Телефон: {{ contacts.phone }}</li>
+        <li>Email: {{ contacts.email }}</li>
+        <li>Адрес: {{ contacts.address }}</li>
+    </ul>
+
+    <h2>Наша команда</h2>
+    <ul>
+        {% for member in team %}
+            <li>{{ member.name }} - {{ member.role }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
